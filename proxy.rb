@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require "socket"
-require "net/http"
 
 # Global constants.
 $DEFAULT_PORT = 80
