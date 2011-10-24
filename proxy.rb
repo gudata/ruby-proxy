@@ -4,6 +4,7 @@ require "socket"
 require "uri"
 require "net/http"
 
+# Global constants.
 $DEFAULT_PORT = 80
 $NUM_REQ_ARGS = 3
 $MAX_CACHE_SIZE = 52428800
