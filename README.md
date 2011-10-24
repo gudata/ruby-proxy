@@ -28,8 +28,9 @@ response by sending the Connection: close header. Simple string parsing was done
 to modify the request headers.
 
 This web proxy is a simple implementation that only services 'GET' requests
-and ignores persistent connections. It is also single threaded. Other features
-were not implemented due to a lack of time and may be included in the future.
+and ignores persistent connections. It is also single threaded and thus
+performance may be slow. Other features were not implemented due to a lack of
+time and may be included in the future.
 
 Note: I recommend Firefox when using this web proxy.
 
