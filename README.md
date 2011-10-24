@@ -50,6 +50,13 @@ If you were listening to port 8989 in your browser (configured as above),
 
 And browse away!
 
+The format of websites you can visit include the following:
+
+	http://www.somesite.com e.g. http://www.cs.cmu.edu/
+	http://www.somesite.com/<filename> e.g. http://www.somesite.com/index.html
+	http://www.somesite.com:<port number> e.g. http://www.somesite.com:8080
+	http://www.somesite.com:<port number>/<filename> e.g. http://www.somesite.com:8080/index.html
+
 # About
 
 Created as part of a programming challenge from the people at SpeakerText for
