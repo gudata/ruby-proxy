@@ -29,7 +29,7 @@ class CacheLine
 end
 
 # Proxy method.
-def daryl_proxy (port)
+def crappy_proxy (port)
 	# Open a socket to the client - in this case, the browser.
 	server = TCPServer.open("localhost", port)
 	#puts "Server Started"
@@ -200,6 +200,6 @@ if __FILE__ == $0
 	if (ARGV.length() != 1)
 		abort("Usage: rb proxy.rb <port>\n")
 	else
-		daryl_proxy(ARGV[0])
+		crappy_proxy(ARGV[0])
 	end
 end
