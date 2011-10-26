@@ -36,11 +36,11 @@ Note: I recommend Firefox when using this web proxy.
 
 # Configuring your browser before using this proxy
 
-	* Open Firefox.
-	* Go to Edit > Preferences > Advanced > Settings.
-	* Select "Manual proxy configuration:".
-	* Under the "HTTP Proxy:" field, enter "localhost".
-	* Under the "Port:" field, enter a port to listen on e.g. 8989.
+* Open Firefox.
+* Go to Edit > Preferences > Advanced > Settings.
+* Select "Manual proxy configuration:".
+* Under the "HTTP Proxy:" field, enter "localhost".
+* Under the "Port:" field, enter a port to listen on e.g. 8989.
 
 # How do I use it?
 	
