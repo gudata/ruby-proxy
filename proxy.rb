@@ -197,7 +197,7 @@ end
 
 if __FILE__ == $0
     if (ARGV.length() != 1)
-        abort("Usage: rb proxy.rb <port>\n")
+        abort("Usage: ruby proxy.rb <port>\n")
     else
         crappy_proxy(ARGV[0])
     end
