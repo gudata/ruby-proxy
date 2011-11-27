@@ -32,7 +32,7 @@ def crappy_proxy (port)
 	# Open a socket to the client - in this case, the browser.
 	server = TCPServer.open("localhost", port)
 	#puts "Server Started"
-	
+
 	cache = Hash.new()
 	# Listen on the given port.
 	loop do
@@ -52,16 +52,16 @@ def crappy_proxy (port)
 			if (get_req[0].eql?("GET"))
 				url = get_req[1]
 				request.push(line)
-			# Check if there is a Host line.
+				# Check if there is a Host line.
 			elsif (get_req[0].eql?("Host:"))
 				request.push(line)
 				time = Time.new()
 				req = parse_request(request, time)
-			# If there is a new line, we have reached the end and we get the headers.
+				# If there is a new line, we have reached the end and we get the headers.
 			elsif (line.eql?("\r\n"))
 				header_str = parse_headers(headers)
 				break
-			# We keep adding the other headers into a hash map.
+				# We keep adding the other headers into a hash map.
 			else
 				colon_index = line.index(':')
 				headers[line[0, colon_index + 1]] = line[colon_index + 1, line.length]
@@ -73,7 +73,7 @@ def crappy_proxy (port)
 			#puts "We have a hit!"
 			cacheObject = cache[url]
 			socket.send(cacheObject.response, port.to_i())
-		# Else there is no cache hit.
+			# Else there is no cache hit.
 		else
 			response = openWebConn(req, header_str)
 			size = cacheSize(cache)
@@ -89,7 +89,7 @@ def crappy_proxy (port)
 				if (size + $MAX_OBJECT_SIZE > $MAX_CACHE_SIZE)
 					deleteCachedObjects(cache)
 				end
-			# Otherwise we don't cache the page.
+				# Otherwise we don't cache the page.
 			else
 				socket.send(response, port.to_i())
 			end
@@ -138,7 +138,7 @@ def parse_headers(headers)
 		elsif (k.casecmp("Proxy-Connection:") == 0)
 			str += "Proxy-Connection: Connection: close\r\n"
 		else
-				str = str + k + v
+			str = str + k + v
 		end
 	end
 	str
@@ -156,7 +156,7 @@ def parse_request(request, time)
 	if (!request[0].include?(line_start))
 		abort("Malformed request line - only http requests are parsed.")
 	end
-	
+
 	# Check if request conforms to METHOD URL HTTP_VERSION
 	req = request[0].split()
 	if (req.length == $NUM_REQ_ARGS)
