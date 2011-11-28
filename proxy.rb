@@ -28,7 +28,7 @@ class CacheLine
 end
 
 # Proxy method.
-def crappy_proxy (port)
+def crappy_proxy(port)
     # Open a socket to the client - in this case, the browser.
     server = TCPServer.open("localhost", port)
     #puts "Server Started"
